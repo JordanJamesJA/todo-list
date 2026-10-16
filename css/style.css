@@ -1,0 +1,129 @@
+
+:root {
+  --text-color: #111827;
+  --secondary-color: #e64843;
+  --accent-color: #4f46e5;
+  --canvas-color: #feece0;
+  --background-color: #ffffff;
+  --secondary-background-color: #fbfaf6;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--background-color);
+  padding: 20px;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 450px;
+  min-height: 350px;
+  padding: 30px;
+  gap: 1.5rem;
+  border-radius: 12px;
+  background-color: var(--canvas-color);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+}
+
+.card h1 {
+  color: var(--text-color);
+  font-size: 1.8rem;
+  text-align: center;
+}
+
+.input-container {
+  display: flex;
+  gap: 10px;
+  width: 100%;
+}
+
+.input-container input {
+  flex: 1;
+  min-width: 0;
+  height: 42px;
+  padding: 0 12px;
+  font-size: 16px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  outline: none;
+}
+
+.input-container input:focus {
+  border-color: var(--accent-color);
+}
+
+.input-container button {
+  width: 42px;
+  height: 42px;
+  border: none;
+  border-radius: 6px;
+  background-color: var(--accent-color);
+  color: white;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.input-container button:hover {
+  background-color: #3730a3;
+}
+
+#task-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+#task-list li {
+  list-style: none;
+  padding: 14px;
+  background-color: white;
+  border-radius: 6px;
+  color: var(--text-color);
+  overflow-wrap: anywhere;
+}
+
+#task-list li {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 12px 15px;
+  margin-bottom: 10px;
+  background-color: white;
+  border-radius: 6px;
+  color: var(--text-color);
+  overflow-wrap: anywhere;
+}
+
+.delete-btn {
+  flex-shrink: 0;
+  padding: 8px 12px;
+  background-color: var(--secondary-color);
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.delete-btn:hover {
+  background-color: #c73530;
+}
+
+.delete-btn:active {
+  transform: scale(0.96);
+}
